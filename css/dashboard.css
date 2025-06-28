@@ -1,0 +1,138 @@
+body{
+    background-image: url("../img/b9.jpg");
+}
+/* Styling for Tasks and Goals Section */
+h3 {
+    font-size: 1.8em;
+    text-align: center;
+    margin-top: 100px;
+    color: #4a4a4a;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+hr{
+    margin-top: 100px;
+}
+/* Grid Container for Tasks and Goals */
+.task-goal-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.task-goal-container .task-goal-card a {
+    list-style: none;
+    text-decoration: none; /* This removes the underline */
+    color: inherit; /* Optional: Keeps the text color the same */
+}
+
+.task-goal-container .task-goal-card a:hover {
+    text-decoration: none; /* Ensure no underline on hover as well */
+}
+
+
+/* Card Style */
+.task-goal-card {
+    background: linear-gradient(to bottom right, #fdfbfb, #ebedee);
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.task-goal-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Task/Goal Content */
+.task-goal-card h4 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #3d3d3d;
+}
+
+.task-goal-card p {
+    font-size: 1em;
+    margin: 5px 0;
+    color: #606060;
+}
+.task-goal-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.task-goal-actions button {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.task-goal-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.task-goal-actions button {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.task-goal-actions .delete-btn {
+    background-color: #ff4c4c; /* A bright red color */
+    border: none;
+    color: white !important;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.task-goal-actions .delete-btn:hover {
+    background-color: #d11a2a; /* Darker red on hover */
+}
+
+/* Progress Bar */
+.progress-bar {
+    background: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 15px;
+    margin-top: 10px;
+}
+
+.progress-bar-fill {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    height: 100%;
+    width: 30%;
+    transition: width 0.4s ease;
+}
+
+.progress-bar-fill:hover {
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .task-goal-card {
+        margin: 0px auto;
+        width: 90%;
+    }
+    h3 {
+        font-size: 1.5em;
+    }
+}

@@ -1,0 +1,76 @@
+/* General Page Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    background-image: url("../img/b9.jpg");
+}
+
+h2 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 28px;
+    color: #4e3bff;
+}
+
+
+/* Form Styling */
+form {
+    max-width: 600px;
+    margin: 100px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-size: 16px;
+    color: #4e3bff;
+    margin-bottom: 8px;
+    display: block;
+}
+
+form input[type="text"], 
+form textarea, 
+form input[type="date"], 
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form textarea {
+    height: 100px;
+    resize: none;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4e3bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #3a2bff;
+}
+/* Responsive Design */
+@media (max-width: 599px) {
+    form {
+        margin: 100px 20px 10px 10px ;
+        padding: 10px 27px 10px 10px;
+        border: #333 solid 5px;
+    }
+
+}
+

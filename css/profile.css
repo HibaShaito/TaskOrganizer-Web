@@ -1,0 +1,73 @@
+body {
+    background-image: url("../img/b9.jpg");
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 100vh;
+}
+
+.profile-card {
+    text-align: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.profile-picture {
+    margin-bottom: 15px;
+}
+
+
+.profile-picture img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #e0e0e0; /* Light gray for default profile picture */
+    display: inline-block;
+}
+
+/* Custom button styling */
+.custom-upload-button, button[type="submit"] {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover,
+.custom-upload-button:hover {
+    background-color: #5348c7;
+}
+
+.custom-upload-button {
+    margin-bottom: 10px;
+}
+
+.profile-info h2 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.profile-info p {
+    margin: 5px 0;
+    color: #666;
+}
+
+/* Hide the default file input */
+#uploadButton {
+    display: none;
+}

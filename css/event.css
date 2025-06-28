@@ -1,0 +1,161 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    background-image: url("../img/b9.jpg");
+}
+
+/* Ensure the header doesn't cover the content */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+body {
+    padding-top: 200px; /* Adjust based on the height of your header */
+}
+
+/* Events Section */
+h2, h3 {
+    text-align: center;
+    margin: 20px 0;
+    color: #6c63ff;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.events ul {
+    padding: 5px 15px;
+    list-style: none;
+    margin: 110px auto;
+    max-width: 600px;
+}
+
+.events ul li {
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    display: block;
+    position: relative; /* Required for the tooltip */
+}
+
+.events ul li .event-info {
+    display: inline-block;
+    position: relative;
+}
+
+.events ul li .tooltip {
+    visibility: hidden;
+    width: 200px; /* Adjust width as needed */
+    background-color: #6c63ff;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position above the text */
+    left: 50%;
+    margin-left: -100px; /* Center the tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+    word-wrap: break-word; /* Ensure long words break */
+}
+
+.events ul li .event-info:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.events ul li:nth-child(even) {
+    background-color: #f3f3ff;
+}
+
+.events ul li span {
+    color: #6c63ff;
+    font-weight: bold;
+}
+
+/* Form Styling */
+.event-form {
+    max-width: 600px;
+    margin: 30px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.event-form label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.event-form input,
+.event-form textarea {
+    width: calc(100% - 20px); /* Adjust the width to ensure padding works */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.event-form input:focus,
+.event-form textarea:focus {
+    border-color: #6c63ff;
+}
+
+.event-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #6c63ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.event-form button:hover {
+    background-color: #5048c3;
+}
+
+.delete-btn {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.delete-btn:hover {
+    background-color: #ff1a1a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .event-form {
+        padding: 15px;
+        margin: 10px;
+        border: none;
+    }
+}

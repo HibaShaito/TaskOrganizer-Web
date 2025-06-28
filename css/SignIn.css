@@ -1,0 +1,556 @@
+/* Reset margins and paddings, and ensure consistent box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure the html element takes up the full height */
+html {
+    height: 100%;
+}
+
+/* Apply flexbox to the body for centering content */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;  /* This ensures the body takes up the full height of the viewport */
+    background: url("../img/test2.jpeg") no-repeat center center;  /* Add background image */
+    background-size: cover;  /* Ensure the background image covers the entire screen */
+}
+
+
+.container {
+    position: relative;
+    height: 650px;
+}
+
+
+.cloud {
+    position: relative;
+    width: 700px;
+    height: 720px;
+    background: linear-gradient(rgb(15, 19, 80),rgb(60, 61, 141),rgb(123, 117, 172));
+    border-radius: 100px;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0px 0px 20px rgb(184, 196, 109);
+}
+
+.cloud::before, .cloud::after, 
+.cloud .cloud-part1 {
+    content: '';
+    position: absolute;
+    background:rgb(216, 216, 216);
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+    z-index: -2;
+}
+
+.cloud::before {
+    top: -50px;
+    left: 130px;
+    width: 200px;
+    height: 200px;
+}
+
+.cloud::after {
+    top: -100px;
+    right: 230px;
+    width: 220px;
+    height: 220px;
+}
+
+.cloud .cloud-part1 {
+    top: -50px;
+    right: 130px;
+    width: 160px;
+    height: 140px;
+}
+
+.cloud.scaled::before {
+    top: -70px;
+}
+
+.cloud.scaled::after {
+    top: -120px;
+}
+
+.cloud.scaled .cloud-part1 {
+    top: -70px;
+}
+
+/* Eye styling positioned on the cloud parts */
+.eye {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(rgb(155, 162, 255),rgb(0, 0, 0) );
+    border-radius: 50%;
+    z-index: -1;
+    transition: all 0.5s ease-in-out;
+}
+
+.left-eye {
+    /* Positioned on .cloud::before */
+    top: -10px;
+    left: 290px;
+}
+
+.right-eye {
+    /* Positioned on .cloud::after */
+    top: -10px;
+    right: 280px;
+}
+
+.mouth {
+    position: absolute;
+    width: 42px;
+    height: 20px;
+    background:rgb(19, 23, 99);
+    border-radius: 0 0 50px 50px;
+    z-index: -1;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Positioned on .cloud .cloud-part1 */
+.mouth {
+    top: 0px;
+    right: 323px;
+}
+
+/* Adjust positions during animation */
+.cloud.scaled .left-eye {
+    top: -50px; /* Move up */
+}
+
+.cloud.scaled .right-eye {
+    top: -50px; /* Move up */
+}
+
+.cloud.scaled .mouth {
+    top: -25px; 
+}
+@import url('https://fonts.googleapis.com/css2?family-Poppins:wght@300;400;500;700;800;900&display=swap');
+.wrapper .form-box.login{
+width: 100%;
+padding: 120px 120px ;
+}
+.wrapper .form-box{
+position: absolute;                                 
+    top: 30px;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction:column ;
+    justify-content: center;
+}
+.form-box h2{
+    font-size: 32px;
+    color: #fff;
+    text-align: center;
+}
+.form-box .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 25px 0;
+}
+.input-box input{
+    width: 100%;
+    height:100% ;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #fff;
+    padding-right: 60px;
+    font-size: 16px;
+    color: #ecfb98;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.input-box input:focus,
+.input-box input:valid{
+   border-bottom-color: #ecfb98 ;
+   
+}
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+    color: #ecfb98;
+}
+.input-box i{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #fff;
+    transition: 0.5s;
+}
+.input-box input:focus~i,
+.input-box input:valid~i{
+  color: #ecfb98;
+}
+
+.btn{
+    position: relative;
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    border:2px solid #ecfb98;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #857ccd;
+    z-index: 1;
+    overflow: hidden;
+}
+.btn::before{
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 300%;
+    background:linear-gradient( #daba68, rgb(255, 255, 255), #d4bb7c, #faffc0); 
+    z-index: -1;
+    transition: 0.5s;
+}
+.btn.facebook::before {
+    background:linear-gradient( #ad94ff, rgb(255, 255, 255), #ad94ff, #ad94ff); 
+}
+
+.btn.google::before {
+    background:linear-gradient( #94e1ff, rgb(255, 255, 255),  #94e1ff,  #94e1ff); 
+}
+
+.btn:hover::before{
+    top: 0;
+}
+.form-box .logreg-link{
+   font-size:14.5px;
+   color: #fff;
+   text-align: center;
+   margin: 20px 0 10px;
+}
+.logreg-link p a{
+    color: #ecfb98;
+    text-decoration: none;
+    font-weight: 600; 
+}
+.logreg-link p a:hover{
+    text-decoration: underline;
+}  
+
+#custom-alert {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(37, 15, 89, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 0 15px #ecfb98;
+}
+
+#custom-alert .custom-alert-content{
+    color: #fff;
+}
+
+#custom-alert-button{
+    margin-top: 20px;
+    background: transparent;
+    border: 2px solid #ecfb98;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#custom-alert-button:hover {
+    background-color: #ecfb98;
+    color: #000;
+}
+
+/* Hide the alert initially */
+.hidden {
+    display: none;
+}
+
+.input-box i.bx-show,.input-box i.bx-hide {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.input-box input[type="password"] + i.bx-show ,.input-box input[type="password"] + i.bx-hide {
+    display: inline;
+}
+.input-box input[type="password"]:focus + i.bx-show,
+.input-box input[type="password"]:valid + i.bx-show {
+    color:  rgb(255, 255, 255);
+}
+
+.input-box input[type="password"]:focus + i.bx-show,
+.input-box input[type="password"]:valid + i.bx-show {
+    color:  rgb(255, 255, 255);
+}
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+display: none;
+}
+
+input[type="password"]::-webkit-clear-button,
+input[type="password"]::-webkit-inner-spin-button,
+input[type="password"]::-webkit-reveal-button {
+display: none;
+}
+
+/* This will apply your desired background and text colors to autofilled inputs */
+input:-webkit-autofill {
+    background-color: transparent !important;
+    color: #ecfb98 !important; /* Matches the text color */
+    box-shadow: 0 0 0px 1000px transparent inset; /* Ensure the input stays transparent */
+    transition: background-color 5000s ease-in-out 0s; /* This prevents the autofill background from changing */
+}
+
+/* Ensure that the autofilled text is visible in the desired color */
+input:-webkit-autofill::first-line {
+    color: #ecfb98 !important; /* Text color */
+}
+
+@media (max-width: 480px) {
+
+.cloud {
+
+    width: 390px;
+    height: 750px;
+    margin:0px ;
+   
+}
+.wrapper .form-box.login{
+width: 90%;
+padding: 0px ;
+}
+
+.form-box h2{
+margin-top: 20px;
+margin-left: 20px;
+}
+.form-box .input-box{
+    width: 90%;
+    height: 50px;
+    margin: 25px 40px;
+}
+.btn{
+    width: 100%;
+    margin-left: 20px ;
+}
+
+.cloud::before {
+    left: 250px;
+    height: 150px;
+    width: 150px;
+}
+
+.cloud::after {
+    right: 100px;
+    width: 200px;
+    height: 200px;   
+}
+
+.cloud .cloud-part1 {
+    right: 250px;
+    height: 150px;
+    width: 150px;
+}
+
+
+.left-eye {
+    left:130px;
+}
+
+.right-eye {
+    right: 150px;
+}
+.mouth {
+    right: 184px;
+}
+.form-box .logreg-link{
+    font-size:14.5px;
+    color: #fff;
+    text-align: center;
+    margin: 0px 0px 10px 20px;
+ }
+ hr{
+    margin-left: 20px;
+ }
+
+}
+
+@media (max-width: 541px) {
+    
+    .cloud {
+        width: 350px;
+        height: 610px;
+        margin-top:40px;
+        border-radius: 50px;
+       
+    }
+    .wrapper .form-box.login{
+        width: 90%;
+        height: -100%;
+        padding: 0px ;
+        }
+    .form-box h2{
+    font-size: 20px;
+    margin-left: 30px;
+    margin-bottom: 0px;
+    margin-top:0px;
+    }
+   
+    .btn{
+        width: 100%;
+        margin-left: 20px ;
+        height: 30px;
+    }
+    
+    .cloud::before {
+        left: 250px;
+        height: 100px;
+        width: 100px;
+    }
+    
+    .cloud::after {
+        right: 80px;
+        width: 200px;
+        height: 170px;   
+    }
+    
+    .cloud .cloud-part1 {
+        right: 250px;
+        height: 100px;
+        width: 100px;
+    }
+    
+    
+    .left-eye {
+        left:120px;
+    }
+    
+    .right-eye {
+        right: 140px;
+    }
+    .mouth {
+        right: 164px;
+    }
+    .form-box .input-box{
+        width: 90%;
+        height: 40px;
+        margin: 25px 40px;
+    }
+    .eye {
+        width:25px;
+        height: 25px;
+    }
+    .mouth {
+        width: 40px;
+        height: 20px;
+    }
+    }
+
+  
+@media only screen and (max-width: 1024px) and (max-height: 600px) {
+    .cloud {
+        width: 550px;
+        height: 540px;
+        margin-top:50px;
+        border-radius: 50px;
+       
+    }
+    .wrapper .form-box.login{
+        width: 90%;
+        height: 100%;
+        padding: 0px ;
+    }
+    .form-box h2{
+    font-size: 20px;
+    margin-left: 40px;
+    margin-bottom: 0px;
+    margin-top:0px;
+    }
+   
+    .btn{
+        width: 90%;
+        margin-left: 50px ;
+        height: 30px;
+    }
+    
+    .cloud::before {
+        left: 100px;
+        height: 100px;
+        width: 110px;
+    }
+    
+    .cloud::after {
+        right: 170px;
+        width: 200px;
+        height: 170px;   
+    }
+    
+    .cloud .cloud-part1 {
+        right: 100px;
+        height: 100px;
+        width: 100px;
+    }
+    
+    
+    .left-eye {
+        left:210px;
+    }
+    
+    .right-eye {
+        right: 200px;
+    }
+    .mouth {
+        right: 250px;
+    }
+    .form-box .input-box{
+        width: 90%;
+        height: 30px;
+        margin: 20px 60px;
+    }
+    .form-box .logreg-link{
+        font-size:14.5px;
+        color: #fff;
+        text-align: center;
+        margin: 0px 0px 5px 50px;
+     }
+     hr{
+        margin-left: 50px;
+     }
+}

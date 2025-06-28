@@ -1,0 +1,182 @@
+/* General Page Layout */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    background-image: url("../img/b9.jpg");
+}
+
+/* Header & Navbar */
+header {
+    background-color: #4e3bff;
+    padding: 20px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.navbar .logo h5 {
+    font-size: 18px;
+    color: white;
+    margin: 0;
+}
+
+.navbar .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links li {
+    margin: 0 15px;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar #mobile i {
+    font-size: 24px;
+    color: #b197fc;
+    cursor: pointer;
+}
+
+/* Task Details Section */
+h1 {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 32px;
+    color: #4e3bff;
+}
+section {
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 24px;
+    color: #4e3bff;
+    margin-bottom: 15px;
+}
+
+form label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+form input[type="text"], form input[type="date"], form select {
+    width: 100%;
+    padding: 10px 0px 10px 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #4e3bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button:hover {
+    background-color: #3a2bff;
+}
+
+/* Subtasks Section */
+.subtasks ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.subtasks li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+.progress ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.progress li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.subtasks input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: #4e3bff;
+}
+
+.subtasks button {
+    padding: 10px 20px;
+    background-color: #b197fc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.subtasks button:hover {
+    background-color: #9f84f5;
+}
+
+/* Progress Section */
+.progress {
+    margin-top: 40px;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 20px;
+}
+
+.progress-bar-fill {
+    background-color: #4e3bff;
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.progress p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+}
